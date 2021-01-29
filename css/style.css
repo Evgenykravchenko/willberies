@@ -27,6 +27,14 @@ body {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.5px;
+  border-bottom: 1px solid transparent;
+}
+
+.navigation-link:hover,
+.navigation-link:active {
+  color: #262D33;
+  border-bottom: 1px solid #262D33;
+  transition: all .3s ease-out;
 }
 
 .button {
@@ -43,6 +51,13 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  font-size: 15px;
+  background-color:#FF4F52;
+  transition: all .3s ease-out;
 }
 
 .button-icon, .button-price {
@@ -115,6 +130,12 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.slider-button:hover > img,
+.slider-button:active > img {
+  opacity: .5;
+  transition: .3s ease-out;
 }
 
 .card {
@@ -205,14 +226,39 @@ body {
   padding: 10px;
 }
 
+.more:hover,
+.more:active {
+  text-decoration: underline;
+  transition: .3s ease-out;
+}
+
 .goods-card {
-  position: relative;
-  
+  position: relative; 
   text-align: center;
   padding-top: 30px;
   padding-bottom: 35px;
   padding-left: 35px;
   padding-right: 35px;
+}
+
+.goods-card:hover > .goods-title,
+.goods-card:hover > .goods-description,
+.goods-card:hover > .goods-price,
+.goods-card:active > .goods-title,
+.goods-card:active > .goods-description,
+.goods-card:active > .goods-price {
+  color: #FF4F52;
+  transition: all .3s ease-out;
+}
+
+.goods-card:hover > .label,
+.goods-card:active > .label {
+  background-color:#FF4F52;
+  transition: all .3s ease-out;
+}
+
+.arrival-product {
+  text-decoration: none;
 }
 
 .goods-card .label {
@@ -300,7 +346,7 @@ body {
 }
 
 @media (max-width: 1200px) {
-  .slide-1 {
+  .slide-1, .slide-2, .slide-3 {
     background-size: cover;
   }
 
